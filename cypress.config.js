@@ -1,9 +1,13 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://intranet.ctism.ufsm.br',
+    baseUrl: 'http://localhost',
+    env: {
+      hideCredentials: true,
+      requestMode: true,
+    },
   },
   fixturesFolder: false,
   video: false,
-});
+})
